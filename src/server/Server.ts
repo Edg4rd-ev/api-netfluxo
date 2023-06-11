@@ -1,11 +1,8 @@
-import Fastify from 'fastify'
+import express from 'express'
+import { router } from './routes'
 
-const fastify = Fastify({
-  logger: true
-})
+const server = express()
+server.use(express.json())
+server.use(router)
 
-fastify.get('/', (_, res) => {
-  return res.send('Aoba')
-})
-
-export { fastify }
+export { server }

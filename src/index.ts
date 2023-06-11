@@ -1,3 +1,3 @@
-import { fastify } from './server/Server'
+import { server } from './server/Server'
 
-fastify.listen({ port: 3333 })
+server.listen({ port: 3333 })
