@@ -1,12 +1,11 @@
 import { Router } from 'express'
+import { UsersController } from '../controllers'
 
 const router = Router()
 
 router.get('/', (_, res) => {
   return res.send('Aoba')
 })
-router.get('/teste', (_, res) => {
-  return res.send('testando hehe')
-})
+router.post('/user/create', UsersController.create)
 
 export { router }
